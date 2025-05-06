@@ -1,0 +1,64 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Avance1 del mapa.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "Avance1 del mapa.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 3630,
+                "y": 123
+            }
+        },
+        "Grass_background_1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Grass_background_2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tiles de entorno suelo.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesdeviga en diagonal.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "brush.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/artur/TiledMapProjects/Mi plataforma",
+    "last.imagePath": "C:/Users/artur/Desktop/Recursos visuales/Escenario/Final/Final",
+    "map.height": 34,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 180,
+    "openFiles": [
+        "Avance1 del mapa.tmx",
+        "Tiles de entorno suelo.tsx",
+        "Tilesdeviga en diagonal.tsx",
+        "brush.tsx",
+        "Grass_background_1.tsx",
+        "Grass_background_2.tsx"
+    ],
+    "project": "The Epic of the hero.tiled-project",
+    "recentFiles": [
+        "Grass_background_2.tsx",
+        "Grass_background_1.tsx",
+        "brush.tsx",
+        "Tilesdeviga en diagonal.tsx",
+        "Tiles de entorno suelo.tsx",
+        "Avance1 del mapa.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
