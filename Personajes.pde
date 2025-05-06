@@ -2,7 +2,7 @@ class Stella {
   PImage[] correrFrames;
   int totalFrames = 8;
   int frameActual = 0;
-  int frameDelay = 5;
+  int frameDelay = 1;
   int frameCounter = 0;
 
   float x = 200;
