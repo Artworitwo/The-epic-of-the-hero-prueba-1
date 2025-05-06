@@ -2,15 +2,16 @@ class Stella {
   PImage[] correrFrames;
   int totalFrames = 8;
   int frameActual = 0;
-  int frameDelay = 5;
-  int frameCount = 0;
+  int frameDelay = 1;
+  int frameCounter = 0;
 
   float x = 200;
-  float y = 300;
+  float y = 0;
   float ancho = 32;
   float alto = 32;
+
   float velocidadY = 0;
-  float gravedad = 1;
+  float gravedad = 0.6;
   boolean enElSuelo = false;
 
   Stella() {
@@ -20,29 +21,26 @@ class Stella {
     }
   }
 
-  void actualizar(ArrayList<Colisionable> colisiones) {
-    frameCount++;
-    if (frameCount >= frameDelay) {
-      frameCount = 0;
+  void actualizar(ArrayList<RectanguloColision> colisiones) {
+    // Animación
+    frameCounter++;
+    if (frameCounter >= frameDelay) {
+      frameCounter = 0;
       frameActual = (frameActual + 1) % totalFrames;
     }
 
+    // Física
     velocidadY += gravedad;
     y += velocidadY;
     enElSuelo = false;
 
-    for (Colisionable c : colisiones) {
-      if (c.colisionaCon(x, y, ancho, alto)) {
-        if (velocidadY > 0) {
+    // Colisión con suelo
+    for (RectanguloColision r : colisiones) {
+      if (colisionaCon(r)) {
+        if (velocidadY > 0) { // solo si cae
+          y = r.y - alto;
           velocidadY = 0;
           enElSuelo = true;
-          if (c instanceof RectanguloColision) {
-            RectanguloColision r = (RectanguloColision) c;
-            y = r.y - alto;
-          } else if (c instanceof PoligonoColision) {
-            // Para polígonos, simplemente detener caída sin ajuste fino
-            // Se puede mejorar con cálculo de intersección
-          }
         }
       }
     }
@@ -50,5 +48,9 @@ class Stella {
 
   void dibujar() {
     image(correrFrames[frameActual], x, y, ancho, alto);
+  }
+
+  boolean colisionaCon(RectanguloColision r) {
+    return x + ancho > r.x && x < r.x + r.w && y + alto > r.y && y < r.y + r.h;
   }
 }
